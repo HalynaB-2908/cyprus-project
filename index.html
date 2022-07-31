@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Beautiful island</title>
+    <style>
+      h1 {
+        border: 1px solid #fff;
+        border-radius: 5px;
+        padding: 20px;
+      }
+
+      img {
+        display: block;
+        margin: 10px auto;
+        border-radius: 5px;
+        max-width: 70%;
+      }
+
+      hr {
+        border: 0.2px solid #fff;
+      }
+
+      p {
+        text-align: justify;
+        line-height: 1.5;
+        font-size: large;
+      }
+      a {
+        text-decoration: none;
+        color: #fff;
+      }
+      a:hover {
+        text-decoration: underline;
+        cursor: pointer;
+      }
+      button {
+        display: block;
+        margin: 20px auto;
+        padding: 20px;
+        background-color: #87c1f9;
+        color: #fff;
+        font-weight: bold;
+        font-size: larger;
+        border: none;
+        border-radius: 5px;
+        box-shadow: 0 1px 20px rgb(0 0 0 / 50%);
+        transition: opacity 150ms ease;
+      }
+      button:hover {
+        opacity: 0.8;
+        cursor: pointer;
+      }
+      .container {
+        font-family: Helvetica, Arial, sans-serif;
+        background-image: linear-gradient(
+          109.6deg,
+          rgba(156, 252, 248, 1) 11.2%,
+          rgba(110, 123, 251, 1) 91.1%
+        );
+        color: #fff;
+        padding: 30px;
+        max-width: 50%;
+        margin: 20px auto;
+        border-radius: 0.5em;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>I want to tell you about Cyprus</h1>
+      <h2>Do you want to travel there?</h2>
+      <hr />
+      <img
+        src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/033/503/original/cyprus.jpg?1651742521"
+      />
+      <hr />
+      <p>
+        Few feelings can compare to that of sinking your toes into warm sand… of
+        the sun kissing your skin, and your senses taking in the fresh, salty
+        breeze and the endless views of glittering blue waters. This idyllic
+        scene is one that can be enjoyed for the most part of the year on the
+        <strong>island of Cyprus</strong>, and one that offers a myriad of
+        experiences, from the total relaxation of sunbathing with drink in hand,
+        to the thrill and challenge of trying a new water sport.
+      </p>
+      <a
+        href="https://www.visitcyprus.com/index.php/en/discovercyprus/sun-sea"
+        target="_blank"
+        ><em>Find out more about Cyprus</em></a
+      >
+      <button>Schedule new trip</button>
+    </div>
+    <script>
+      function schedule() {
+        let name = prompt("what is your name?");
+        let email = prompt("Please, write your e-mail adresse");
+        let h2 = document.querySelector("h2");
+        if (name.length > 0 && email.length > 0) {
+          h2.innerHTML = `Thanks, ${name} I will contact you soon!`;
+        }
+      }
+      let newTripButton = document.querySelector("button");
+      newTripButton.addEventListener("click", schedule);
+    </script>
+  </body>
+</html>
